@@ -1,50 +1,130 @@
-# Welcome to your Expo app 👋
+# 📱 EnrutApp Mobile
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+<p align="center">
+  <img src="https://img.shields.io/badge/React_Native-0.73-61DAFB?logo=react&logoColor=black" alt="React Native" />
+  <img src="https://img.shields.io/badge/Expo-50-000020?logo=expo&logoColor=white" alt="Expo" />
+  <img src="https://img.shields.io/badge/TypeScript-5.3-3178C6?logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Expo_Router-3.4-black?logo=expo&logoColor=white" alt="Expo Router" />
+  <img src="https://img.shields.io/github/license/EnrutApp/enrutapp-mobile" alt="License" />
+</p>
 
-## Get started
+---
 
-1. Install dependencies
+## 📋 Descripción
 
-   ```bash
-   npm install
-   ```
+**EnrutApp Mobile** es la aplicación móvil oficial para conductores y usuarios del sistema EnrutApp. Construida con **React Native** y **Expo**, ofrece una experiencia nativa fluida para la gestión de transporte.
 
-2. Start the app
+### Funcionalidades Principales
 
-   ```bash
-   npx expo start
-   ```
+- 🗺️ **Seguimiento en Tiempo Real**: Visualización de rutas y ubicación de conductores.
+- 🚦 **Gestión de Estados**: Conductores pueden cambiar su estado (Disponible, En Ruta, etc.).
+- 📅 **Turnos y Horarios**: Visualización y gestión de turnos asignados.
+- 📦 **Encomiendas**: Gestión de entregas y recolecciones.
+- 🔔 **Notificaciones**: Alertas en tiempo real sobre cambios en rutas o servicios.
 
-In the output, you'll find options to open the app in a
+## 🚀 Inicio Rápido
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+### Prerrequisitos
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+- Node.js >= 18.x
+- npm o yarn
+- Expo Go en tu dispositivo móvil (Android/iOS) o Emulador
 
-## Get a fresh project
-
-When you're ready, run:
+### Instalación
 
 ```bash
-npm run reset-project
+# Clonar el repositorio
+git clone https://github.com/EnrutApp/enrutapp-mobile.git
+cd enrutapp-mobile
+
+# Instalar dependencias
+npm install
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### Configuración de Entorno
 
-## Learn more
+Crea un archivo `.env` en la raíz del proyecto basado en `.env.example`:
 
-To learn more about developing your project with Expo, look at the following resources:
+```env
+EXPO_PUBLIC_API_URL=http://localhost:3000/api
+EXPO_PUBLIC_SOCKET_URL=http://localhost:3000
+```
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+### Ejecutar la Aplicación
 
-## Join the community
+```bash
+# Iniciar servidor de desarrollo
+npm start
 
-Join our community of developers creating universal apps.
+# Ejecutar en Android (Emulador o Dispositivo USB)
+npm run android
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+# Ejecutar en iOS (Simulador o Dispositivo USB - Solo Mac)
+npm run ios
+
+# Ejecutar en Web
+npm run web
+```
+
+## 📱 Estructura del Proyecto
+
+El proyecto utiliza **Expo Router** para la navegación basada en archivos.
+
+```
+app/
+├── (tabs)/                 # Navegación principal por pestañas
+├── _layout.tsx             # Layout raíz de la aplicación
+├── index.tsx               # Pantalla inicial
+├── login.tsx               # Pantalla de inicio de sesión
+├── forgot.tsx              # Recuperación de contraseña
+├── driver-map.tsx          # Mapa del conductor
+│
+components/                 # Componentes reutilizables
+├── ui/                     # Componentes de UI básicos
+├── tracking/               # Componentes de mapa y seguimiento
+│
+constants/                  # Constantes (Colores, Estilos, Config)
+context/                    # Contextos de React (Auth, Socket)
+hooks/                      # Custom Hooks
+services/                   # Servicios de API y lógica de negocio
+assets/                     # Imágenes, fuentes e íconos
+```
+
+## 🛠️ Stack Tecnológico
+
+- **Framework**: React Native con Expo SDK 50
+- **Navegación**: Expo Router v3
+- **Lenguaje**: TypeScript
+- **Mapas**: React Native Maps
+- **Estilos**: StyleSheet estándar y constantes de diseño
+- **Iconos**: Expo Vector Icons
+- **HTTP Client**: Fetch API / Axios
+- **Socket**: Socket.io-client
+
+## 🤝 Desarrollo
+
+Consulta [CONTRIBUTING.md](CONTRIBUTING.md) para detalles sobre el flujo de trabajo y estándares de código de mobile.
+
+### Comandos Útiles
+
+```bash
+# Verificación de tipos y linting
+npm run lint
+
+# Resetear caché de Expo (si hay problemas de build)
+npm start -- --clear
+```
+
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia MIT. Ver el archivo [LICENSE](LICENSE) para más detalles.
+
+## 👥 Equipo
+
+- **EnrutApp Team** - Desarrollo Móvil
+
+---
+
+<p align="center">
+  Hecho con ❤️ por el equipo de EnrutApp
+</p>
