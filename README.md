@@ -1,6 +1,10 @@
 # 📱 EnrutApp Mobile
 
 <p align="center">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" width="80" alt="React Logo" />
+</p>
+
+<p align="center">
   <img src="https://img.shields.io/badge/React_Native-0.73-61DAFB?logo=react&logoColor=black" alt="React Native" />
   <img src="https://img.shields.io/badge/Expo-50-000020?logo=expo&logoColor=white" alt="Expo" />
   <img src="https://img.shields.io/badge/TypeScript-5.3-3178C6?logo=typescript&logoColor=white" alt="TypeScript" />
